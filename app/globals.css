@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e1b4b;
+  --color-accent: #6366f1;
+  --color-accent-soft: #e0e7ff;
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased min-h-screen text-base leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .metallic-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-indigo-600 font-bold tracking-tight;
+  }
+  
+  .glass {
+    @apply bg-white border border-slate-200 shadow-sm rounded-2xl;
+  }
+  
+  .glass-dark {
+    @apply bg-slate-950 border-none text-white rounded-2xl shadow-md transition-all duration-300;
+  }
+  
+  .glass-card {
+    @apply bg-white border border-slate-200 rounded-3xl shadow-sm transition-all duration-300;
+  }
+  
+  .glass-nav {
+    @apply bg-white/90 backdrop-blur-md border-b border-slate-200;
+  }
+
+  .bento-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+  
+  .bento-card {
+    @apply bg-white border border-slate-200 shadow-sm rounded-3xl p-8 transition-all duration-300;
+  }
+}
+
+
+
